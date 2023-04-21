@@ -1,0 +1,98 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+ul.list-group {
+    max-height: 300px;
+    overflow-y: scroll;
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes strikeThrough {
+    0% {
+        text-decoration-color: transparent;
+    }
+
+    100% {
+        text-decoration-color: inherit;
+    }
+}
+
+.list-group-item {
+    animation: slideIn 0.5s ease;
+}
+
+.completed {
+    text-decoration: line-through;
+    animation: strikeThrough 0.3s ease;
+    color: gray;
+}
+
+.alert {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    transition: all 0.3s ease;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.alert.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+body.dark-mode {
+    background-color: #212529;
+    color: #f8f9fa;
+}
+
+body.dark-mode .list-group-item {
+    background-color: #343a40;
+    color: #f8f9fa;
+    border-color: rgba(255, 255, 255, 0.125);
+}
+
+body.dark-mode .form-control,
+body.dark-mode .form-check-input {
+    background-color: #343a40;
+    color: #f8f9fa;
+    border-color: rgba(255, 255, 255, 0.125);
+}
+
+body.dark-mode .btn-primary {
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+    color: #ffffff;
+}
+
+body.dark-mode .alert {
+    background-color: #0d6efd;
+    color: #ffffff;
+}
+
+body.dark-mode .alert.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+body.dark-mode .completed {
+    color: #adb5bd;
+}
+
+/* Change dark mode button to white when dark mode is toggled on */
+body.dark-mode .btn-dark {
+    color: #ffffff;
+}

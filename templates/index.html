@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To-Do Dashboard</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/19213652d1.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/static/style.css" />
+    <script src="/static/script.js"></script>
+  </head>
+
+  <body>
+    <!-- Alert container -->
+    <div id="alert-container"></div>
+
+    <div class="container">
+      <!-- Dark mode toggle -->
+      <!-- Scale the button to 1.5x -->
+      <button id="dark-mode-btn" class="btn">
+        <i
+          class="fa-regular fa-sun"
+          style="font-size: 1.5em; margin-top: 0.25em"
+        ></i>
+      </button>
+
+      <h1 class="text-center mt-4 mb-4">To-Do Dashboard</h1>
+      <div class="form-row">
+        <div class="col-md-6">
+          <input
+            type="text"
+            id="task-input"
+            class="form-control mb-2"
+            placeholder="Enter task"
+          />
+        </div>
+        <div class="col-md-3">
+          <select id="priority-select" class="form-control mb-2">
+            <option value="Low">Low</option>
+            <option value="Medium">Medium</option>
+            <option value="High">High</option>
+          </select>
+        </div>
+        <div class="col-md-3">
+          <input type="date" id="due-date-input" class="form-control mb-2" />
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="col-md-6">
+          <input
+            type="time"
+            id="due-time-input"
+            class="form-control mb-2"
+            placeholder="HH:MM (opt)"
+          />
+        </div>
+        <div class="col-md-3">
+          <button id="add-task-btn" class="btn btn-primary mb-2">
+            Add Task
+          </button>
+        </div>
+      </div>
+      <br />
+      <div class="form-group">
+        <label for="sort-select">Sort tasks by:</label>
+        <select class="form-control" id="sort-select">
+          <option value="date">Date</option>
+          <option value="time">Time</option>
+          <option value="priority">Priority</option>
+        </select>
+      </div>
+
+      <div class="form-row">
+        <div class="col-md-12">
+          <div class="text-right">
+            <button id="clear-all-btn" class="btn btn-danger mb-2">
+              Clear All Tasks
+            </button>
+          </div>
+          <ul id="tasks-list" class="list-group"></ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
