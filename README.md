@@ -10,3 +10,5 @@ To-Do Dashboard is a simple, user-friendly web application for managing tasks an
 - Sort tasks based on date, time, or priority.
 - Toggle dark mode for improved usability and accessibility.
 - Clear all tasks with a single click.
+
+## [Link to Demo](https://todo-dashboard.azurewebsites.net/)
