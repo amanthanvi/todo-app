@@ -191,7 +191,8 @@ document.addEventListener("DOMContentLoaded", () => {
     sortTasks("priority");
   });
 
-  document.getElementById("clear-all-btn").addEventListener("click", () => {
+  const clearAllTasks = document.getElementById("clear-all-btn");
+  clearAllTasks.addEventListener("click", () => {
     fetch("/clear_tasks", {
       method: "POST",
     })
