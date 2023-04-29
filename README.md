@@ -7,6 +7,9 @@ To-Do Dashboard is a simple, user-friendly web application for managing tasks an
 ## Features:
 - Add tasks with priority levels (Low, Medium, High), due dates, and optional due times.
 - Visually distinguish task priorities through color-coding.
-- Sort tasks based on date, time, or priority.
+- Sort tasks based on date, time, or priority (work in progress).
 - Toggle dark mode for improved usability and accessibility.
-- Clear all tasks with a single click.
+- Clear all tasks with a single click (work in progress).
+
+## License
+This project is licensed under the GNU General Public License v3.0 (GPL-3.0).
