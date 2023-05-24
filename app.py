@@ -1,6 +1,6 @@
 import datetime
 import json
-from flask import Flask, render_template, request, jsonify
+from flask import Flask, render_template, request, jsonify, escape
 import os
 
 template_dir = os.path.abspath("templates")
@@ -32,9 +32,11 @@ def add_task():
 
     task_data = {"id": task_id, "task": task, "priority": priority,
                  "due_date": due_date, "due_time": due_time}
+    # Escape input before adding to list to prevent XSS
+    task_data = {k: escape(v) for k, v in task_data.items()}
     tasks.append(task_data)
     task_id += 1
-
+    
     return jsonify(task_data)
 
 @app.route("/clear_tasks", methods=["POST"])
