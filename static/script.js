@@ -22,7 +22,17 @@ function displayTask(taskData) {
   let tasksList = document.getElementById("tasks-list");
   let listItem = document.createElement("li");
   listItem.classList.add("list-group-item");
-  listItem.innerHTML = `${taskData.task} - ${taskData.priority} - ${taskData.due_date} ${taskData.due_time}`;
+
+  let taskTextNode = document.createTextNode(`${taskData.task} - `);
+  let priorityTextNode = document.createTextNode(`${taskData.priority} - `);
+  let dueDateTextNode = document.createTextNode(`${taskData.due_date} `);
+  let dueTimeTextNode = document.createTextNode(`${taskData.due_time}`);
+
+  listItem.appendChild(taskTextNode);
+  listItem.appendChild(priorityTextNode);
+  listItem.appendChild(dueDateTextNode);
+  listItem.appendChild(dueTimeTextNode);
+
   tasksList.appendChild(listItem);
 }
 
